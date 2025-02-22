@@ -134,7 +134,6 @@ drops:Button("đảo minh mama", function()game.Players.LocalPlayer.Character.Hu
 end)
 drops:Button( "đảo dark", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3465.68188, 66.2542191, 3718.19531)
 end)
-
 drops:Button( "đảo kaido", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
 end)
 drops:Button("đảo platium", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258, 87700, 3260)
