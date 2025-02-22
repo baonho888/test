@@ -529,6 +529,11 @@ game:GetService("Players").LocalPlayer.Character.Gojo.C.Fire:FireServer()
 wait(0.1)
 end
 end)
+
+drops:Button("hoho", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
 local drops = serv:Channel("Auto raid⭐")
     drops:Textbox("Distance aura", "Type a number", true, function(v)
     dis = tonumber(v)
