@@ -119,7 +119,6 @@ end
 end
 end
 end)
-
 local drops = serv:Channel("Teleport island")
 drops:Button("đảo khởi đầu", function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
 end)
@@ -153,7 +152,6 @@ drops:Button("đảo cid và geto",  function()game.Players.LocalPlayer.Characte
 end)
 drops:Button( "đảo sun",  function()game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
 end)
-
 local drops = serv:Channel("auto secret ⭐")
 drops:Toggle("auto secret x5", false, function(t)
     aura = t
