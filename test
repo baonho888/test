@@ -504,7 +504,11 @@ drops:Textbox("fake level", "Số level", true, function(level)
     end
 end)
 
-local drops = serv:Channel("Anti+Troll")
+local drops = serv:Channel("Hitbox+Teleporter⭐")
+
+local drops = serv:Channel("Bring+mobs+player⭐")
+
+local drops = serv:Channel("Anti+Troll⭐")
 drops:Button("skill", function()
 end)
 drops:Toggle("skill Z gojo", false, function(t)
@@ -636,3 +640,5 @@ end)
 sldrs:Button("Tốc độ 150", function() 
     sldr:Change(150) 
 end)
+
+local drops = serv:Channel("Hub⭐")
