@@ -503,6 +503,8 @@ drops:Textbox("fake level", "Số level", true, function(level)
         end
     end
 end)
+
+local drops = serv:Channel("Anti+Troll")
 drops:Button("skill", function()
 end)
 drops:Toggle("skill Z gojo", false, function(t)
@@ -533,6 +535,7 @@ end)
 drops:Button("hoho", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
 end)
+
 
 local drops = serv:Channel("Auto raid⭐")
     drops:Textbox("Distance aura", "Type a number", true, function(v)
