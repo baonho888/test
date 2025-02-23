@@ -569,6 +569,22 @@ drops:Toggle("Kill Aura Humanoid", false, function(t)
         end
     end
 end)
+
+drops:Button("kill aura ", function()
+getgenv().G = true
+getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
+while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
+wait(0.9)
+sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
+sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
+for i,d in pairs(game.Workspace:GetDescendants()) do
+    if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
+        d.Health = 0
+    end
+end
+end
+end)
+
 drops:Toggle("auto dark orb store đừng sài ⚠️", false, function(t)
     aura = t
 dis = tonumber(v)
