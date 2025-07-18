@@ -1,67 +1,87 @@
-local player = game.Players.LocalPlayer
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-if player.Name == "bao2008c" or player.Name == "LzJaTUDSmXS" or player.Name == "danhrlom" or player.Name == "Anh7_Tino" or player.Name == "" then
-    print("nằm mơ đi em")
-else
-    player:Kick("MUA SCRIPT KO FREE")
+local win = DiscordLib:Window("lê bảo duy vip lê tuấn cook")
+local serv = win:Server("hack riêng VNP 2⭐", "")
+local drops = serv:Channel("Farm⭐")
+local dis = nil
+local aura = false
+local autoQuest = false
+local selectedQuest = ""
+drops:Button("get max level ", function()
+end)
+drops:Dropdown("Chọn Auto Quest", {
+"Auto Quest 1 - Pride",
+"Auto Quest 2 - Grab",
+"Auto Quest 3 - Sukuna",
+"Auto Quest 4 - Kaido",
+"Auto Quest 5 - Nickbeo",
+"Auto Quest 6 - Tengen",
+"Auto Quest 7 - Paw",
+"Auto Quest 8 - Cid",
+"Auto Quest 9 - Geto",
+"Auto Quest 10 - Magma"
+}, function(selected)
+selectedQuest = selected
+end)
+
+local toggle = drops:Toggle(" Auto Quest", false, function(t)
+autoQuest = t
+if autoQuest then
+if selectedQuest == "Auto Quest 1 - Pride" then
+while autoQuest do
+workspace.NPCS.Quest9.ClickPart.QuestTake.QuestTake.Accept3.RemoteEvent:FireServer()
+wait(0.1)
 end
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Seven7-lua/Roblox/refs/heads/main/Librarys/Orion/Orion.lua')))()
-local Window = OrionLib:MakeWindow({Name = "Flandre Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
-local Tab = Window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-
-local Section = Tab:AddSection({
-	Name = "Không có gì trên đời là miễn phí"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-local Section = Tab:AddSection({
-	Name = "kill aura👇"
-})
-
-Tab:AddButton({
-	Name = "bật kill aura(áp dụng với sea2 và raid)",
-	Callback = function()
-getgenv().G = true
-getgenv().Creator = 'https://discord.gg/B3HqPPzFYr - HalloweenGaster'
-while getgenv().G and getgenv().Creator == 'https://discord.gg/B3HqPPzFYr - HalloweenGaster' do
-wait(0.9)
-sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 112412400000)
-sethiddenproperty(game.Players.LocalPlayer, "MaxSimulationRadius", 112412400000)
-for i,d in pairs(game.Workspace:GetDescendants()) do
-    if d.ClassName == 'Humanoid' and d.Parent.Name ~= game.Players.LocalPlayer.Name then
-        d.Health = 0
-    end
+elseif selectedQuest == "Auto Quest 2 - Grab" then
+while autoQuest do
+workspace.NPCS.Quest7.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 3 - Sukuna" then
+while autoQuest do
+workspace.NPCS.Quest6.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 4 - Kaido" then
+while autoQuest do
+workspace.NPCS.Quest0.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 5 - Nickbeo" then
+while autoQuest do
+workspace.NPCS.Quest4.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 6 - Tengen" then
+while autoQuest do
+workspace.NPCS.Quest5.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 7 - Paw" then
+while autoQuest do
+workspace.NPCS.Quest1.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 8 - Cid" then
+while autoQuest do
+workspace.NPCS.Quest8.ClickPart.QuestTake.QuestTake.Accept2.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 9 - Geto" then
+while autoQuest do
+workspace.NPCS.Quest8.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
+wait(0.1)
+end
+elseif selectedQuest == "Auto Quest 10 - Magma" then
+while autoQuest do
+workspace.NPCS.Quest2.ClickPart.QuestTake.QuestTake.Accept1.RemoteEvent:FireServer()
+wait(0.1)
 end
 end
-      		print("button pressed")
-  	end    
-})
-
-local Section = Tab:AddSection({
-	Name = "get armor 200m - 90b👇(cần nhiều ng trong sv)"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-
-Tab:AddButton({
-	Name = "copy all armor",
-	Callback = function()
-local Players = game:GetService("Players")
+end
+end)
+drops:Button("hack máu", function()local Players = game:GetService("Players")
 local armors = {"Cursed-Armor", "Unique-Armor", "Darkness-Armor", "Thunder-Armor", "Thunder-Armor", "Diamond-Armor", "Golden-Armor", "Epic-Armor", "Iron-Armor", "Wooden-Armor"} -- Danh sách các loại giáp
 
 for _, player in pairs(Players:GetPlayers()) do
@@ -75,587 +95,295 @@ for _, player in pairs(Players:GetPlayers()) do
         end
     end
 end
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-
-local Section = Tab:AddSection({
-	Name = "fast attack👇"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-	Name = "cid",
-	Callback = function()
-local args = {
-    [1] = 8,
-    [2] = 1
-}
-
--- Lặp liên tục với khoảng thời gian giữa mỗi lần thực thi
-while true do
-    game:GetService("Players").LocalPlayer.PlayerGui.Tengen.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-    wait(0) -- Điều chỉnh thời gian chờ theo nhu cầu
-end
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "geto",
-	Callback = function()
-local args = {
-    [1] = 8,
-    [2] = 1
-}
-
--- Lặp liên tục với khoảng thời gian giữa mỗi lần thực thi
-while true do
-    game:GetService("Players").LocalPlayer.PlayerGui.Tengen.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-    wait(0) -- Điều chỉnh thời gian chờ theo nhu cầu
-end
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "escanor",
-	Callback = function()
-local args = {
-    [1] = 8,
-    [2] = 1
-}
-
--- Vòng lặp thực hiện liên tục
-while true do
-    game:GetService("Players").LocalPlayer.PlayerGui.Zabuza.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-    wait(0) -- Điều chỉnh thời gian chờ theo nhu cầu
-end
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "guts",
-	Callback = function()
-local args = {
-    [1] = 8,
-    [2] = 1
-}
-
--- Vòng lặp thực hiện liên tục
-while true do
-    game:GetService("Players").LocalPlayer.PlayerGui.Zabuza.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-    wait(0) -- Điều chỉnh thời gian chờ theo nhu cầu
-end
-
-      		print("button pressed")
-  	end    
-})
-Tab:AddButton({
-	Name = "yoru v3",
-	Callback = function()local args = {
-    [1] = 8,
-    [2] = 3
-}
-
--- Lặp liên tục với khoảng thời gian giữa mỗi lần thực thi
-while true do
-    game:GetService("Players").LocalPlayer.PlayerGui.YoruV3.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
-    wait(0) -- Điều chỉnh thời gian chờ theo nhu cầu
-end
-
-print("button pressed")
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Tab = Window:MakeTab({
-	Name = "secret fruit",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-local Section = Tab:AddSection({
-	Name = "bấm vào để auto quay👇"
-})
-Tab:AddButton({
-	Name = "quay secret",
-	Callback = function()
-local UserInputService = game:GetService("UserInputService")
-local running = true
-
--- Chạy trong một luồng riêng
-task.spawn(function()
-    while running do
-        fireclickdetector(game:GetService("Workspace").MAP["STARTER ISLAND [ Lv 1+ ]"]["Secret Random"].RANDOM)
-        wait(0) -- Thêm thời gian chờ để giảm tải
-    end
 end)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "quay secret(sea2)",
-	Callback = function()
-local UserInputService = game:GetService("UserInputService")
-local running = true
-
-task.spawn(function()
-    while running do
-        -- Kiểm tra sự tồn tại của các đối tượng trước khi gọi fireclickdetector
-        local workspace = game:GetService("Workspace")
-        local marineIsland = workspace:FindFirstChild("Marine Island [ 3000 - 5000 ]")
-        local secretRandom = marineIsland and marineIsland:FindFirstChild("Secret Random")
-        local randomObject = secretRandom and secretRandom:FindFirstChild("RANDOM")
-
-        if randomObject then
-            fireclickdetector(randomObject)
-        else
-            warn("Không tìm thấy đối tượng RANDOM!")
-        end
-
-        task.wait(0) -- Điều chỉnh thời gian chờ để giảm tải hệ thống
-    end
+drops:Toggle("auto farm money work sea 1", false, function(t)
+    aura = t
+dis = tonumber(v)
+for i = 1, 10000 do
+fireclickdetector(workspace.MAP["Event Island"].EventBox.ClickDetector)
+end
 end)
+local drops = serv:Channel("Fast Attack⭐")
 
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "quay yoru",
-	Callback = function()
-local UserInputService = game:GetService("UserInputService")
-local running = true
-
-task.spawn(function()
-    while running do
-        -- Kiểm tra tồn tại của ClickDetector trước khi thực hiện
-        local clickDetector = game.Workspace:FindFirstChild("MAP")
-            and game.Workspace.MAP:FindFirstChild("DAK ISLAND [Lv 1350+]")
-            and game.Workspace.MAP["DAK ISLAND [Lv 1350+]"]:FindFirstChild("Yoru V3 random")
-            and game.Workspace.MAP["DAK ISLAND [Lv 1350+]"]["Yoru V3 random"]:FindFirstChild("ClickDetector")
-
-        if clickDetector then
-            fireclickdetector(clickDetector)
-        else
-            warn("Không tìm thấy ClickDetector!")
-        end
-
-        task.wait(0) -- Điều chỉnh thời gian chờ để giảm tải hệ thống
-    end
-end)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "quay wando(sea2)",
-	Callback = function()
-local UserInputService = game:GetService("UserInputService")
-local running = true
-
-task.spawn(function()
-    while running do
-        -- Kiểm tra tồn tại của ClickDetector trước khi thực hiện
-        local clickDetector = game.Workspace:FindFirstChild("Platinum Town [ 2000 - 3000 ]")
-            and game.Workspace["Platinum Town [ 2000 - 3000 ]"]:FindFirstChild("PlatinumMAP")
-            and game.Workspace["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP:FindFirstChild("GodBox")
-            and game.Workspace["Platinum Town [ 2000 - 3000 ]"].PlatinumMAP.GodBox:FindFirstChild("ClickDetector")
-
-        if clickDetector then
-            fireclickdetector(clickDetector)
-        else
-            warn("Không tìm thấy ClickDetector!")
-        end
-
-        task.wait(0) -- Điều chỉnh thời gian chờ để giảm tải hệ thống
-    end
-end)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Tab = Window:MakeTab({
-	Name = "quest",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-local Section = Tab:AddSection({
-	Name = "phải bấm vào npc nhận nv rồi bấm quest 1,nếu ko được thì 2 và 3"
-})
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-	Name = "quest 1",
-	Callback = function()
--- Script 3: Quest Accept 1
+drops:Dropdown("Chọn Fast Attack", {
+"Fast Attack 1 - Noobsword",
+"Fast Attack 2 - Garou",
+"Fast Attack 3 - Gojo",
+"Fast Attack 4 - Sukuna",
+"Fast Attack 5 - Zabuza",
+"Fast Attack 6 - Geto",
+"Fast Attack 7 - Tengen",
+"Fast Attack 8 - YoursV3",
+"Fast Attack 9 - Escanor",
+"Fast Attack 10 - Karate",
+"Fast Attack 11 - YoruV2",
+"Fast Attack 12 - Cid"
+}, function(selected)
+if selected == "Fast Attack 1 - Noobsword" then
 while wait() do
-    game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept1.RemoteEvent:FireServer()
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Noobsword.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
 end
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "quest 2",
-	Callback = function()
--- Script 2: Quest Accept 2
+elseif selected == "Fast Attack 2 - Garou" then
 while wait() do
-    game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept2.RemoteEvent:FireServer()
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Garou.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
 end
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "quest 3",
-	Callback = function()
--- Script 1: Quest Accept 3
+elseif selected == "Fast Attack 3 - Gojo" then
 while wait() do
-    game:GetService("Players").LocalPlayer.PlayerGui.QuestTake.Accept3.RemoteEvent:FireServer()
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Gojo.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
 end
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Tab = Window:MakeTab({
-	Name = "teleports",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-
---[[
-Name = <string> - The name of the tab.
-Icon = <string> - The icon of the tab.
-PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
-]]
-local Section = Tab:AddSection({
-	Name = "bấm vào để dịch chuyển"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-	Name = "đảo khởi đầu",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(485.583771, 35.5632935, -511.945404)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo tuyết",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-915.918945, 33.7605095, 282.443604)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo cát",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-708.765259, 69.1108398, 1745.13916)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo trời",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4594.52393, 4279.44092, 474.423523)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "thị trấn end",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2223.75146, 36.3414612, 1965.90369)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo minh mama",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2569.90283, 51.1074524, -65.4458542)
-
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo dark",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3465.68188, 66.2542191, 3718.19531)
-
-      		print("button pressed")
-  	end    
-})
-local Section = Tab:AddSection({
-	Name = "Sea 2👇"
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-Tab:AddButton({
-	Name = "đảo kaido",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-685, 87690, 789)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo platium",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1258, 87700, 3260)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo marine",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-160, 87750, -2010)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo nickbeo",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1600, 87700, 637)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo garou",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1600, 87700, 1073)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo sukuna",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1500, 87700, 2800)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo grab",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2040, 87700, 50)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo cid và geto",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1635, 87710, -1085)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-Tab:AddButton({
-	Name = "đảo sun",
-	Callback = function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1603, 87700, -2191)
-      		print("button pressed")
-  	end    
-})
-
---[[
-Name = <string> - The name of the button.
-Callback = <function> - The function of the button.
-]]
-local Tab = Window:MakeTab({
-	Name = "credits",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-})
-local Section = Tab:AddSection({
-	Name = "script được làm bởi:Hamter
-})
-
---[[
-Name = <string> - The name of the section.
-]]
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "Toggleui"
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ResetOnSpawn = false
-
-local Toggle = Instance.new("TextButton")
-Toggle.Name = "Toggle"
-Toggle.Parent = ScreenGui
-Toggle.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Toggle.BackgroundTransparency = 0.5
-Toggle.Position = UDim2.new(0, 0, 0.454706937, 0)
-Toggle.Size = UDim2.new(0, 50, 0, 50)
-Toggle.Draggable = true
-
-local Corner = Instance.new("UICorner")
-Corner.CornerRadius = UDim.new(0.2, 0)
-Corner.Parent = Toggle
-
-local Image = Instance.new("ImageLabel")
-Image.Name = "Icon"
-Image.Parent = Toggle
-Image.Size = UDim2.new(1, 0, 1, 0)
-Image.BackgroundTransparency = 1
-Image.Image = "rbxassetid://129480702328610" 
-
-local Corner2 = Instance.new("UICorner")
-Corner2.CornerRadius = UDim.new(0.2, 0)
-Corner2.Parent = Image
-
-Toggle.MouseButton1Click:Connect(function()
-  OrionLib:ToggleUi()
+elseif selected == "Fast Attack 4 - Sukuna" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Sukuna.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 5 - Zabuza" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Zabuza.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 6 - Geto" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Geto.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 7 - Tengen" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Tengen.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 8 - YoursV3" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.YoursV3.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 9 - Escanor" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Escanor.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 10 - Karate" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Karate.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 11 - YoruV2" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.YoruV2.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+elseif selected == "Fast Attack 12 - Cid" then
+while wait() do
+local args = { [1] = 8, [2] = 3 }
+game:GetService("Players").LocalPlayer.PlayerGui.Cid.Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+end
+end
 end)
+
+local players = game:GetService("Players"):GetPlayers()
+local playerNames = {}
+
+for _, player in pairs(players) do
+    table.insert(playerNames, player.Name)
+end
+
+local items = {}
+for _, player in pairs(players) do
+    for _, tool in pairs(player.Backpack:GetChildren()) do
+        if tool:IsA("Tool") then
+            table.insert(items, tool.Name)
+        end
+    end
+    for _, tool in pairs(player.Character:GetChildren()) do
+        if tool:IsA("Tool") then
+            table.insert(items, tool.Name)
+        end
+    end
+end
+
+drops:Dropdown("fast attack v2 chọn xong chọn tool th đó là đc", playerNames, function(selectedPlayer)
+    drops:Dropdown("Chọn Item", items, function(selectedItem)
+        while wait() do
+            game:GetService("Players")[selectedPlayer].Backpack[selectedItem].Hitbox:FireServer()
+        end
+    end)
+end)
+drops:Textbox("tên item muốn fast", "item", true, function(v)
+    local playerName = v
+    while wait() do
+        local args = { [1] = 8, [2] = 3 }
+        game:GetService("Players").LocalPlayer.PlayerGui[playerName].Skill1b.Z.TextButtonm1.Hitbox:FireServer(unpack(args))
+    end
+end)
+local drops = serv:Channel("check")
+local selectedPlayer = nil
+
+drops:Dropdown("Chọn người chơi", playerNames, function(selected)
+    selectedPlayer = selected
+    print("Người chơi đã chọn: " .. selectedPlayer)
+end)
+drops:Button("Check Item", function()
+    if selectedPlayer then
+        local player = game.Players[selectedPlayer]
+        local backpack = player.Backpack
+        if backpack then
+            local items = {}
+            for _, item in pairs(backpack:GetChildren()) do
+                if item:IsA("Tool") or item:IsA("Equipment") then
+                    table.insert(items, item.Name)
+                end
+            end
+            if #items > 0 then
+                local itemString = table.concat(items, ", ")
+                DiscordLib:Notification("Item của " .. selectedPlayer, itemString, "Ok")
+            else
+                DiscordLib:Notification("Item của " .. selectedPlayer, "Không có item nào", "Ok")
+            end
+        else
+            DiscordLib:Notification("Lỗi", "Người chơi đã chọn không có túi đồ", "Ok")
+        end
+    else
+        DiscordLib:Notification("Lỗi", "Chưa chọn người chơi", "Ok")
+    end
+end)
+drops:Button("Check Level", function()
+    if selectedPlayer then
+        local level = game:GetService("Players")[selectedPlayer].Data.Levels
+        if level then
+            DiscordLib:Notification("Level của " .. selectedPlayer, tostring(level.Value), "Ok")
+        else
+            DiscordLib:Notification("Lỗi", "Không thể lấy level của người chơi", "Ok")
+        end
+    else
+        DiscordLib:Notification("Lỗi", "Chưa chọn người chơi", "Ok")
+    end
+end)
+drops:Button("Check Health", function()
+    local player = game:GetService("Players").LocalPlayer
+    local data = player:FindFirstChild("Data")
+    if data then
+        local healthP = data:FindFirstChild("HealthP")
+        if healthP then
+            local maxHealth = healthP:FindFirstChild("MaxHealth")
+            if maxHealth then
+                local currentHealth = healthP:FindFirstChild("CurrentHealth")
+                if currentHealth then
+                    DiscordLib:Notification("Health của bạn", "Max Health: " .. tostring(maxHealth.Value) .. "\nCurrent Health: " .. tostring(currentHealth.Value), "Ok")
+                end
+            end
+        end
+    end
+end)
+drops:Textbox("fake level", "Số level", true, function(level)
+    local player = game.Players.LocalPlayer
+    local data = player:FindFirstChild("Data")
+    if data then
+        local levels = data:FindFirstChild("Levels")
+        if levels then
+            levels.Value = tonumber(level)
+        end
+    end
+end)
+drops:Button("Check Beli cả server", function()
+    for _, player in pairs(game:GetService("Players"):GetPlayers()) do
+        local data = player:FindFirstChild("Data")
+        if data then
+            local belis = data:FindFirstChild("Belis")
+            if belis then
+                local beliValue = belis.Value
+                if beliValue >= 1000000 then
+                    local beliString = tostring(math.floor(beliValue / 1000000)) .. "M"
+                    DiscordLib:Notification("Beli của " .. player.Name, beliString, "Ok")
+                else
+                    DiscordLib:Notification("Beli của " .. player.Name, tostring(beliValue), "Ok")
+                end
+            end
+        end
+    end
+end)
+local drops = serv:Channel("Auto raid⭐")
+    drops:Textbox("Distance aura", "Type a number", true, function(v)
+    dis = tonumber(v)
+    if not dis then
+        DiscordLib:Notification("Error", "Please enter a valid number for Distance", "Ok")
+    end
+end)
+
+drops:Toggle("Kill Aura Humanoid", false, function(t)
+    aura = t
+    if not dis then
+        DiscordLib:Notification("Warning", "Choose Distance for Kill Aura", "Ok")
+        return
+    end
+    while aura do
+        wait(0.1)
+        for _, v in pairs(game:GetService("Workspace")["NPC DAMAGE"]:GetDescendants()) do
+            local humanoid = v:FindFirstChildOfClass("Humanoid")
+            local rootPart = v:FindFirstChild("HumanoidRootPart")
+            if humanoid and rootPart and humanoid.Health > 0 and v.Name ~= game.Players.LocalPlayer.Name then
+                local distance = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - rootPart.Position).Magnitude
+                if distance <= dis then
+                    pcall(function()
+                        repeat
+                            wait()
+                            humanoid.Health = 0
+                            rootPart.CanCollide = false
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        until humanoid.Health <= 0 or not aura
+                    end)
+                end
+            end
+        end
+    end
+end)
+drops:Toggle("auto dark orb store đừng sài ⚠️", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+drops:Toggle("auto sjw store Đừng sài ⚠️", false, function(t)
+    aura = t
+dis = tonumber(v)
+while true do
+local args = {
+    [1] = 1
+}
+
+game:GetService("ReplicatedStorage").Save.SavingEvent:FireServer(unpack(args))
+wait(0.1)
+end
+end)
+drops:Toggle("TP to raid", false, function(t)
+    aura = t
+dis = tonumber(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(578.97998, 33.2999954, -460.05011, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+end)
+local sldr = sldrs:Slider("Tốc độ", 0, 150, 100, function(t) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = t 
+end)
+
+sldrs:Button("Tốc độ 50", function() 
+    sldr:Change(50) 
+end)
+
+sldrs:Button("Tốc độ 75", function() 
+    sldr:Change(75) 
+end)
+
+sldrs:Button("Tốc độ 100", function() 
+    sldr:Change(100) 
+end)
+
+sldrs:Button("Tốc độ 150", function() 
+    sldr:Change(150) 
+end)
+
